@@ -12,10 +12,15 @@ namespace Mission06_dbcampbe.Models
 
         [Key]
         [Required]
-        public int MovieID { get; set; }
+        public int MovieId { get; set; }
         [Required]
-        public string Category { get; set; }
+
+        //Build Foreign Key Relationship
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         [Required]
+
+        //Back to regular fields
         public string Title { get; set; }
         [Required]
         public int Year { get; set; }
